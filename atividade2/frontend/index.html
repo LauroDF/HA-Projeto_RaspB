@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Rede - Raspberry Pi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <div>
+                <h1>Monitor de Rede Local</h1>
+                <p>Status de conectividade da Raspberry Pi</p>
+            </div>
+            <span class="status">Aguardando dados</span>
+        </header>
+
+        <!-- Informações do Servidor -->
+        <section class="informacoes">
+            <div class="card identificacao">
+                <h2>Equipamento</h2>
+                <p class="valor" id="server-id">—</p>
+                <span>Modelo da Raspberry Pi</span>
+            </div>
+
+            <div class="card identificacao">
+                <h2>Endereço IP</h2>
+                <p class="valor" id="server-ip">—</p>
+                <span>IP na rede local</span>
+            </div>
+        </section>
+
+        <!-- Configurações de Rede -->
+        <section class="metricas">
+            <div class="card">
+                <h2>Interface</h2>
+                <p class="valor" id="server-iface">—</p>
+                <span>Interface ativa</span>
+            </div>
+
+            <div class="card">
+                <h2>Máscara</h2>
+                <p class="valor" id="server-netmask">—</p>
+                <span>Máscara de rede</span>
+            </div>
+
+            <div class="card">
+                <h2>Gateway</h2>
+                <p class="valor" id="server-gateway">—</p>
+                <span>Roteador padrão</span>
+            </div>
+
+            <div class="card">
+                <h2>DNS</h2>
+                <p class="valor" id="server-dns">—</p>
+                <span>Servidores DNS</span>
+            </div>
+        </section>
+
+        <!-- Estado das Interfaces Físicas -->
+        <section class="informacoes">
+            <div class="card">
+                <h2>Ethernet (eth0)</h2>
+                <p class="valor" id="state-eth0">—</p>
+                <span>Estado do cabo</span>
+            </div>
+
+            <div class="card">
+                <h2>Wi-Fi (wlan0)</h2>
+                <p class="valor" id="state-wlan0">—</p>
+                <span>Estado do wireless</span>
+            </div>
+        </section>
+
+        <!-- Tabela de Testes de Conexão -->
+        <section class="card" style="margin-bottom: 16px;">
+            <h2>Testes de Conectividade</h2>
+            <table id="tabela-conexoes" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #e4e7ec; text-align: left;">
+                        <th style="padding: 10px;">Destino</th>
+                        <th style="padding: 10px;">Horário</th>
+                        <th style="padding: 10px;">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas inseridas via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Rodapé com Data -->
+        <section class="card rodape">
+            <div>
+                <h2>Última Verificação</h2>
+                <p class="valor data" id="server-date">—</p>
+            </div>
+            <div>
+                <h2>Status da API</h2>
+                <p class="valor" id="api-status">—</p>
+            </div>
+        </section>
+
+        <p class="observacao">
+            Os dados são coletados em tempo real da Raspberry Pi através da API.
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

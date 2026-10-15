@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Raspberry Pi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="cabecalho">
+            <div>
+                <h1>Monitor Raspberry Pi</h1>
+                <p>Resumo do estado do equipamento</p>
+            </div>
+
+            <span class="status">Aguardando dados</span>
+        </header>
+
+        <section class="informacoes">
+
+            <div class="card identificacao">
+                <h2>Equipamento</h2>
+                <p class="valor" id="id-raspi">—</p>
+                <span>Nome da Raspberry Pi</span>
+            </div>
+
+            <div class="card identificacao">
+                <h2>IP local</h2>
+                <p class="valor" id="ip-local">—</p>
+                <span>Endereço na rede</span>
+            </div>
+
+        </section>
+
+        <section class="metricas">
+
+            <div class="card">
+                <h2>Processador</h2>
+
+                <p class="valor">
+                    <span id="cpu-usage">—</span>
+                </p>
+
+                <div class="barra">
+                    <div class="progresso" id="cpu-barra"></div>
+                </div>
+
+                <span>Utilização da CPU</span>
+            </div>
+
+            <div class="card">
+                <h2>Temperatura</h2>
+
+                <p class="valor">
+                    <span id="cpu-temp">—</span>
+                </p>
+
+                <span>Temperatura do processador</span>
+            </div>
+
+            <div class="card">
+                <h2>Memória</h2>
+
+                <p class="valor">
+                    <span id="ram-usage">—</span>
+                </p>
+
+                <span id="ram-percent">Memória utilizada</span>
+            </div>
+
+            <div class="card">
+                <h2>Armazenamento</h2>
+
+                <p class="valor">
+                    <span id="storage-usage">—</span>
+                </p>
+
+                <span id="storage-percent">Espaço utilizado</span>
+            </div>
+
+        </section>
+
+        <section class="card rodape">
+
+            <div>
+                <h2>Tempo de funcionamento</h2>
+                <p class="valor" id="uptime">—</p>
+            </div>
+
+            <div>
+                <h2>Última atualização</h2>
+                <p class="valor data" id="current-date">—</p>
+            </div>
+
+        </section>
+
+        <p class="observacao">
+            Os dados são coletados diretamente da Raspberry Pi.
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
